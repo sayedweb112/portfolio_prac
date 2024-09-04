@@ -3,41 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="sayed al sahab">    
+    <meta name="keywords" content="portfolio, html, sayed al sahab">
+    <meta name="description" content="Sayed Al Sahab is a web developer">
    
     <title>My portfolio</title>
+
+    <!----------font-awesome cdn------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!---------google font link---------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: antiquewhite;
+            font-family: "Roboto", sans-serif;
+        }
+    </style>  
 </head>
 <body>
+    
 
  <!---------section nav----->
+  <header>
     <nav>
-       <ul>
-        
-        <li>
-           <a href="#about" target="_self">About Me</a>
-          
-        </li>
-        <li>
-           <a href="#skills" target="_self">My Skills</a>
-          
-        </li>
-        <li>
-           <a href="#projects" target="_self">My Projects</a>
-          
-        </li>
-        <li>
-           <a href="#contact" target="_self">Contact Me</a>
-        </li>
-       </ul>
-    </nav>
+        <ul>
+         
+         <li>
+            <a href="#about" target="_self">About Me</a>
+           
+         </li>
+         <li>
+            <a href="#skills" target="_self">My Skills</a>
+           
+         </li>
+         <li>
+            <a href="#projects" target="_self">My Projects</a>
+           
+         </li>
+         <li>
+            <a href="#contact" target="_self">Contact Me</a>
+         </li>
+        </ul>
+     </nav>
+  </header>
+   
+<main>
+       <!---------section intro----->  
 
-   <!---------section intro----->
-
-   <header id="intro">
+   <section id="intro">
     <h1>Sayed Al Sahab</h1>
    <p><em>Web Developer and Programmar</em></p>
    <a target="_blank" href="https://www.youtube.com/@sayedsdesign352/videos">  <img src="./images/IMG270.jpg" width="200px" height="300px" alt="Sayed Al Sahab"></a>
    <hr>
-   </header>
+   </section>
 
    <!---------section about me----->
    <section id="about">
@@ -61,11 +84,11 @@
         <tbody>
             <tr>
                 <td>HTML</td>
-                <td>Intermidiate</td>
+                <td rowspan="2">Intermidiate</td>
             </tr>
             <tr>
                 <td>CSS</td>
-                <td>Intermidiate</td>
+                 
             </tr>
             <tr>
                 <td>JavaSript</td>
@@ -74,6 +97,32 @@
         </tbody>
        </table>
        
+    <div>
+        <h3>Skill Progress</h3>
+      
+        <div>
+         <label for="htmlprogress">HTML:</label>
+        <progress id="htmlProgress" value="90" max="100">90%</progress>
+        </div>
+       <div>
+         
+        <label for="cssprogress">CSS:</label>
+        <progress id="htmlProgress" value="80" max="100">80%</progress>
+       </div>
+       <div>
+         
+        <label for="jsprogress">Javasript:</label>
+        <progress id="htmlProgress" value="50" max="100">50%</progress>
+       </div>
+
+    </div>
+
+    <div>
+        <h3>Experience Level</h3>
+        <label for="experiencelevel">Experience:</label>
+        <meter id="experiencelevel" min="0" max="10" value="1.5">6 month</meter>
+    </div>
+
         </section>
          <!---------section projects----->
    <section id="projects">
@@ -85,12 +134,20 @@
     </ol>
     </section>
 
+    <video height="300px" controls>
+    <source src="./assets/video/VID21.mp4" video type="video/mp4">
+    your browser do not support this type of video.
+
+    </video>
+
     
 
 <!--------Section: Contacts------------>
 <section id="contact">
     <h2>Contact Me</h2>
-    <form>
+    <form 
+          action="https://formspree.io/f/xvgpyajg"
+          method="POST">
       <div>
         <level for="name">Name :</level> 
       <input type="text" id="name" name="name" required >
@@ -99,6 +156,28 @@
      <div>
         <level for="email">Email :</level> 
         <input type="text" id="email" name="email" required >
+     </div>
+     <div>
+        <level for="age">Age :</level> 
+        <input type="number" id="age" name="age" min="18" max="55" required >
+     </div>
+     
+     <div>
+        <level for="website">Website :</level> 
+        <input type="url" id="we bsite" name="website" pattern="https?://.+">
+     </div>
+     
+    
+     
+     <div>
+
+      <label for="subject">Subject: </label>
+      <select name="subject" id="subject">
+        <option value="inquiry">Inquiry</option>
+        <option value="feedback">Feedback</option>
+        <option value="job opportunity">Job Opportunity</option>
+      </select>
+        
      </div>
       
      <div>
@@ -112,12 +191,39 @@
     </form>
 </section>
 
-<!--------Section: Footer------------>
+<!--------Footer------------>
+<footer>
     <p>Copyright reserved by &copy; Sayed2024</p>
     <p>Developed with &hearts; love</p>
     <a href="tel:017881*****">Call me</a>
     <a href="mailto:sayed2003@gmail.com">Email me</a>
    
-
+  <div>
+    <h3>Follow Me</h3>
+    <ul>
+        <li>
+            <a href="#" target="_blank"> <i class="fa-brands fa-facebook"></i>Visit My Facebook Page</a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/@sayedsdesign352/videos" target="_blank"><i class="fa-brands fa-youtube"></i>Youtube Channel</a>
+        </li>
+        <li>
+            <a href="" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkedin Profile</a>
+        </li>
+    </ul>
+  </div>
+  <div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228512.72515497476!2d88.41964245502936!3d26.50367457843265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e32de6fca6019b%3A0x9fa496e687f818c8!2sRangpur!5e0!3m2!1sen!2sbd!4v1725463246281!5m2!1sen!2sbd" 
+   title="Home map"
+    width="300"
+     height="250" 
+     style="border:0;" 
+     allowfullscreen="" 
+     loading="lazy" 
+     referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</footer>
+</main>
 </body>
 </html>
